@@ -1,0 +1,207 @@
+<!-- ... Your HTML code ... -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume Builder</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <h1 class="text-center">Resume Builder</h1>
+      <div class="row">
+        <div class="col-md-6">
+          <form id="resume-form">
+            <!-- Personal Information Section -->
+            <h2>Personal Information</h2>
+            <div class="form-group">
+              <label for="name">Name:</label>
+              <input
+                type="text"
+                class="form-control"
+                id="name"
+                name="name"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                name="email"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone:</label>
+              <input
+                type="tel"
+                class="form-control"
+                id="phone"
+                name="phone"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="address">Address:</label>
+              <textarea
+                class="form-control"
+                id="address"
+                name="address"
+                required
+              ></textarea>
+            </div>
+            <div class="form-group">
+              <label for="photo">Upload Photo:</label>
+              <input
+                type="file"
+                class="form-control"
+                id="photo"
+                name="photo"
+                accept="image/*"
+              />
+              <!-- Specify accept="image/*" to only allow image files -->
+            </div>
+
+            <!-- Educational Background Section -->
+            <h2>Educational Background</h2>
+            <h2>
+              <button
+                type="button"
+                id="edu-button"
+                class="btn btn-success btn-sm toggle-section"
+                data-section="education"
+              >
+                +
+              </button>
+            </h2>
+            <div id="education-section">
+              <div class="education-entry">
+                <div class="form-group">
+                  <label for="university">University:</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="university"
+                    name="university"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="degree">Degree:</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="degree"
+                    name="degree"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="grad-year">Graduation Year:</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="grad-year"
+                    name="grad-year"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- Work Experience Section -->
+            <h2>Work Experience</h2>
+            <h2>
+              <button
+                type="button"
+                id="work-xp-button"
+                class="btn btn-success btn-sm toggle-section"
+                data-section="experience"
+              >
+                +
+              </button>
+            </h2>
+            <div id="experience-section">
+              <div class="experience-entry">
+                <div class="form-group">
+                  <label for="company">Company Name:</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="company"
+                    name="company"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="position">Position:</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="position"
+                    name="position"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="duration">Duration:</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="duration"
+                    name="duration"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- Skills Section -->
+            <h2>Skills</h2>
+            <h2>
+              <button
+                type="button"
+                id="skills-button"
+                class="btn btn-success btn-sm toggle-section"
+                data-section="skills"
+              >
+                +
+              </button>
+            </h2>
+            <div id="skills-section">
+              <div class="skills-entry">
+                <div class="form-group">
+                  <label for="skills">Skills:</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="skills"
+                    name="skills"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary">
+              Generate Resume
+            </button>
+          </form>
+        </div>
+        <div class="col-md-6">
+          <div id="live-preview">
+            <h2>Resume Preview</h2>
+            <!-- Display the resume preview here -->
+            <img id="preview-image" src="" alt="Preview Image" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
